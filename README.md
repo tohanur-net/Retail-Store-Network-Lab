@@ -4,7 +4,7 @@ A simulated enterprise network for a small retail store, built in Cisco Packet T
 
 ## 📐 Topology Overview
 
-![Network Topology](./configuration/images/TOPOLOGY.png)
+![Network Topology](./Configurations/Images/TOPOLOGY.png)
 
 - **edge-R1** — Edge router connecting the store to the ISP, running NAT/PAT (overload) for internal-to-internet traffic.
 - **ISP R2** — Upstream ISP router providing external connectivity to a Payment Server (representing a card-processing gateway).

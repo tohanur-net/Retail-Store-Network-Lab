@@ -34,4 +34,4 @@ A simulated enterprise network for a small retail store, built in Cisco Packet T
 - **NAT overload (PAT)** on the edge router for internal VLANs to reach the internet/payment processor
 - **Static routing** — a default route out to the ISP on edge-R1, a summarized static route back to the internal 192.168.0.0/16 space, and a default route on the core switch pointing to the edge router
 
-See [`configuration/README.md`](./configuration/README.md) for the full device-by-device configuration breakdown.
+See [`configuration/README.md`](./Configurations/README.md) for the full device-by-device configuration breakdown.

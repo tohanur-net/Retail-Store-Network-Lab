@@ -2,7 +2,7 @@
 
 A simulated enterprise network for a small retail store, built in Cisco Packet Tracer. The design covers VLAN segmentation, Layer 3 inter-VLAN routing, DHCP, port security, trunking, SSH management, and NAT/PAT to an ISP for internet and payment-processor connectivity.
 
-## 📐 Topology Overview
+## Topology Overview
 
 ![Network Topology](./Configurations/Images/TOPOLOGY.png)
 
@@ -11,7 +11,7 @@ A simulated enterprise network for a small retail store, built in Cisco Packet T
 - **L3-SW1** — Core Layer 3 switch. Owns the SVIs (VLAN interfaces) for every VLAN, performs inter-VLAN routing, and runs DHCP for all internal VLANs.
 - **SW1 / SW2** — Access-layer Layer 2 switches, trunked back to the core, hosting end devices per VLAN.
 
-## 🗂️ VLAN Design
+## VLAN Design
 
 | VLAN | Name                | Purpose                          | Subnet             |
 |------|----------------------|-----------------------------------|---------------------|
@@ -23,7 +23,7 @@ A simulated enterprise network for a small retail store, built in Cisco Packet T
 | 99   | NETWORK_MANAGEMENT   | Switch/router management (SSH)    | 192.168.99.0/24     |
 | 999  | UNUSED               | Unused/shutdown ports parking lot | —                   |
 
-## ✨ Key Features
+## Key Features
 
 - **Inter-VLAN routing** via SVIs on the L3 core switch (L3-SW1)
 - **DHCP** served per VLAN from L3-SW1, with reserved/excluded ranges for infrastructure addresses
@@ -34,20 +34,4 @@ A simulated enterprise network for a small retail store, built in Cisco Packet T
 - **NAT overload (PAT)** on the edge router for internal VLANs to reach the internet/payment processor
 - **Static routing** — a default route out to the ISP on edge-R1, a summarized static route back to the internal 192.168.0.0/16 space, and a default route on the core switch pointing to the edge router
 
-## 📁 Repository Structure
-
-```
-configuration/
-├── README.md      # Full configuration walkthrough with annotated screenshots
-└── images/         # Packet Tracer screenshots (VLANs, trunks, DHCP, NAT, routing, etc.)
-```
-
 See [`configuration/README.md`](./configuration/README.md) for the full device-by-device configuration breakdown.
-
-## 🛠️ Tools Used
-
-- Cisco Packet Tracer
-
-## 👤 Author
-
-**Tohanur Islam**
